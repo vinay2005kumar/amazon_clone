@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="amazon.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+             <!-- <img src="alogo.png" alt=""> -->
+            <!-- <p>.in</p> -->
+        </div>
+        <div class="location">
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <div class="p1">Deliver to Vinay</div>
+            <div class="p2">Gajapathi...535260</div>
+        </div>
+        <div class="search">
+            <div>All <i class="fa-solid fa-caret-down"></i></div>
+            <input type="search" placeholder="Search Amazon.in">
+            <i class="fa-solid fa-magnifying-glass searchicon"></i>
+        </div>
+        <div class="country">
+            <img src="india.png" alt="hi" width="22" height="16">EN<i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="accounts">
+            <div class="p1">Hello,Vinay</div>
+            <div class="p2">Account & Lists</div>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="order">
+            <div class="p1">
+                Returns
+            </div>
+            <div class="p2">&Orders</div>
+        </div>
+        <div class="cart"> <i class="fa-solid fa-cart-shopping"></i><div class="p">Cart</div></div>
+    </nav>
+    <div class="link">
+        <a href="#"><i class="fa-solid fa-bars"></i>
+            All</a>
+        <a href="#">Buy Again</a>
+        <a href="#">Amazon miniTV</a>
+        <a href="#">Sell</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Coupons</a>
+        <a href="#">Amazon Pay</a>
+        <a href="#">Gift Ideas</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Browsing History 
+            <i class="fa-solid fa-caret-down"></i></a>
+        <a href="#">Fashion</a>
+        <img src="anchorimg.jpg" alt="">
+    </div>
+</header>
+<div class="imgs">
+    
+    <img src="aimg1.jpg" alt="">
+    <img src="aimg2.jpg" alt="">
+    <img src="aimg3.jpg" alt="">
+    <img src="aimg4.jpg" alt="">
+    <img src="aimg5.jpg" alt="">
+    <i class="fa-solid fa-angle-left left" id="left"></i>
+    <i class="fa-solid fa-angle-right right" id="right"></i>
+   
+</div>
+<div class="cards">
+   
+    <div class="card">
+        <h1>Pick up where you left off</h1>
+      <div class="img">
+     <div><img src="acard11.jpg" alt=""><p>Acer Aspire Lite 12th G...</p></div>
+     <div><img src="acard12.jpg" alt=""><p>Lenovo Ideapad Slim 3...</p></div>
+     <div><img src="acard13.jpg" alt=""><p>Lenovo Ideapad Slim 3...</p></div>
+     <div><img src="acard14.jpg" alt=""><p>Amazon Basics Amazon...</p></div>
+    </div>
+    <a href="#">See more</a>
+    </div>
+    <div class="card">
+        <h1>Revamp your home in style</h1>
+      <div class="img">
+     <div><img src="acard21.jpg" alt="" ><p>Cushion covers,bedsheets & more</p></div>
+     <div><img src="acard22.jpg" alt=""><p>Figurines,vases and more</p></div>
+     <div><img src="acard23.jpg" alt=""><p>Home storage</p></div>
+     <div><img src="acard24.jpg" alt=""><p>Lighting solutions</p></div>
+    </div>
+    <a href="#">Explore all</a>
+    </div>
+    <div class="card">
+        <h1>Pick up where you left off</h1>
+        <div class="img">
+            <div class="card3"><img src="acard3.jpg" alt="" width="340px" height="270px"></div>
+           
+           </div>
+      <a href="#">Shop now</a>
+    </div>
+    <div class="card card1">
+     <pre><h1>Launch your brand 
+   on Amazon</h1></pre>
+   <a href="#">Start Selling today</a>
+        <img src="acard4.jpg" alt="">
+        <div class="card2">
+            <img src="acard42.jpg" alt="">
+            <p>Lenovo IdeaPad Slim3 3 2021 11th Gen Intel Core i5
+                15.6 inches FHD Thin Light Buisiness Laptop
+                <h1>₹46,400</h1>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    let i=document.querySelector(".imgs img");
+    let arr=["aimg1.jpg","aimg2.jpg","aimg3.jpg","aimg4.jpg","aimg5.jpg","aimg6.jpg"];
+    let left=document.querySelector("#left");
+    let right=document.querySelector("#right");
+    j=0;
+    right.onclick=()=>{
+        left.style.border='none';
+        left.style.outline='none';
+        j=(j+1)%5;
+        i.setAttribute('src',arr[j]);
+        right.style.width='80px';
+        right.style.height='245px'
+        right.style.border='2px solid black';
+        right.style.outline= '3px solid #fff';
+        right.style.transform='rotateX(1550px)';
+    }
+    left.onclick=()=>{
+        right.style.border='none';
+        right.style.outline='none';
+        if(j==0){
+            j=4;
+            i.setAttribute('src',arr[j]);
+        }
+        else{
+        j=(j-1)%5;
+        i.setAttribute('src',arr[j]);
+        }
+        left.style.width='80px';
+        left.style.height='245px'
+        left.style.border='2px solid black';
+        left.style.outline= '3px solid #fff';
+        left.style.transform='rotateX(1550px)';
+    }
+    
+</script>
+</body>
+</html>
